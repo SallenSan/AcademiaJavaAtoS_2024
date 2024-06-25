@@ -51,15 +51,17 @@ public class ClienteDao {
         }
     }
 
-    public Cliente getCliente(int id){
+    public Cliente getCliente(Long id){
         String query = "select * from cliente where cod_cliente = ?";
         try(Connection connection = DbConnection.getConnection(); PreparedStatement ps = connection.prepareStatement(query)){
-            ps.setInt(1, id);
+            ps.setLong(1, id);
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                id = rs.getInt("cod_cliente");
+                id = rs.getLong("cod_cliente");
                 String nome = rs.getString("Nome");
-                return new Cliente(id, nome);
+                String cpf = rs.getString("cpf");
+                String telefone = rs.getString("Telefone");
+                return new Cliente(id, nome, cpf, telefone);
             }
         }catch (SQLException e){
             e.printStackTrace();
