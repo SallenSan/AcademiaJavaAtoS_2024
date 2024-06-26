@@ -81,8 +81,9 @@ public class AtorDao {
         return ators;
     }
 
+
     public int deletarAtor(int id){
-        String query = "DELETE FROM ator WHERE id = ?";
+        String query = "DELETE FROM ator WHERE cod_ator = ?";
         try(Connection connection = DbConnection.getConnection(); PreparedStatement ps = connection.prepareStatement(query)){
             ps.setInt(1, id);
             return ps.executeUpdate();

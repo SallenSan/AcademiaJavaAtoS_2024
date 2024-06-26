@@ -21,8 +21,7 @@ public class Main {
         //clienteDao.inserirCliente(cliente);
 
         // System.out.println(clienteDao.listarCliente());
-        ators.setNome("Ryan Reynolds");
-        atorDao.inserirAtor(ators);
+        atorDao.deletarAtor(9);
 
         List<Ator> listaAtores = atorDao.listarAtor();
         for (Ator ator : listaAtores) {
