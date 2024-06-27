@@ -1,42 +1,42 @@
 package Hibernate.dao;
-
-
 import Hibernate.model.Departamento;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
+import static Hibernate.dao.HibernateConfig.inSession;
 
 public class DepartamentoDao {
-    Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
-    SessionFactory sessionFactory = cfg.buildSessionFactory();
-    List<Departamento> departamentos = new ArrayList<>();
-
-    static void inSession(EntityManagerFactory factory, Consumer<EntityManager> work) {
-        var entityMananger = factory.createEntityManager();
-        var transaction = entityMananger.getTransaction();
-        try {
-            transaction.begin();
-            work.accept(entityMananger);
-            transaction.commit();
-        } catch (Exception e) {
-            if (transaction.isActive()) transaction.rollback();
-            throw e;
-        }
-        finally {
-            entityMananger.close();
-
-        }
-    }
+    private SessionFactory factory = HibernateConfig.getSessionFactory();
+    private List<Departamento> departamentos = new ArrayList<>();
+    Departamento departamento;
 
     public void save(Departamento departamento) {
         inSession(factory, entityManager -> {
             entityManager.persist(departamento);
         });
     }
-}
 
+    public void update(Departamento departamento) {
+        inSession(factory, entityManager -> {
+            entityManager.merge(departamento);
+        });
+    }
+
+    public List<Departamento> findAll() {
+        inSession(factory, entityManager -> {
+            departamentos = entityManager.createQuery("from Departamento").getResultList();
+        });
+        return departamentos;
+    }
+    public Departamento findById(int id) {
+        inSession(factory, entityManager -> {
+            departamento = entityManager.find(Departamento.class, id);
+        });
+        return departamento;
+    }
+    public void delete(Departamento departamento) {
+        inSession(factory, entityManager -> {
+            entityManager.remove(departamento);
+        });
+    }
+}

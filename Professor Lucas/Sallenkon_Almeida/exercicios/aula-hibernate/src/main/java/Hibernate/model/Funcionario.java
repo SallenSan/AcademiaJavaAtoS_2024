@@ -2,6 +2,7 @@ package Hibernate.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -20,17 +21,14 @@ public class Funcionario {
     private String nome;
     @Column(name = "salario")
     private Double salario;
+    @Column
+    private String cargo;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)// indica que varios funcionarios podem fazer parte de um departamento
     private Departamento departamento;
 
-    @Override
-    public String toString() {
-        return "Funcionario{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", salario=" + salario +
-                ", departamento=" + departamento +
-                '}';
-    }
+    @ManyToOne(fetch = FetchType.EAGER)
+    private List<Projeto> projetos;
+
+
 }

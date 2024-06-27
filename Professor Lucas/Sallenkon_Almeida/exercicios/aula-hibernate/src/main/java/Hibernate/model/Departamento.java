@@ -23,14 +23,8 @@ public class Departamento {
     @Column(name = "nome", unique = true, nullable = false)
     private String nome;
 
-    @OneToMany
+    @OneToMany(mappedBy = "departamento") // indica que um departamento(one) pode ter varios funcionarios(many)
     private List<Funcionario> funcionarios;
 
-    @Override
-    public String toString() {
-        return "Departamento{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                '}';
-    }
+
 }
