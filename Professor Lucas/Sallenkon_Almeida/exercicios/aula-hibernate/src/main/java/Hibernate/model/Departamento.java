@@ -1,10 +1,7 @@
 package Hibernate.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -13,18 +10,22 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@ToString(exclude = "funcionarios")
 public class Departamento {
 
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "nome", unique = true, nullable = false)
+    @Column(nullable = false, unique = true)
     private String nome;
 
-    @OneToMany(mappedBy = "departamento") // indica que um departamento(one) pode ter varios funcionarios(many)
+    @OneToMany(mappedBy = "departamento", fetch = FetchType.EAGER) // indica que um departamento(one) pode ter varios funcionarios(many)
     private List<Funcionario> funcionarios;
+
+    public Departamento(String nome) {
+        this.nome = nome;
+    }
 
 
 }

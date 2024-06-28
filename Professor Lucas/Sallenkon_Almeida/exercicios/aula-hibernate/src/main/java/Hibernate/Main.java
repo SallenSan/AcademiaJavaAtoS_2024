@@ -1,36 +1,23 @@
 package Hibernate;
 
+import Hibernate.dao.DepartamentoDao;
+import Hibernate.dao.FuncionarioDao;
 import Hibernate.model.Departamento;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import Hibernate.model.Funcionario;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //Aponta para o local onde se encontram as configurações feitas no hibernate.cfg.xml
-        Configuration config = new Configuration().configure("/hibernate.cfg.xml");
-        // cria uma factory
-        SessionFactory factory = config.buildSessionFactory();
-        //Cria uma nova session
-        Session session = factory.openSession();
-        //Inicia uma nova transaction
-        session.beginTransaction();
-
-        //Cria um novo objeto departamento
+        FuncionarioDao funcionarioDao = new FuncionarioDao();
+        DepartamentoDao departamentoDao = new DepartamentoDao();
         Departamento departamento = new Departamento();
-        departamento.setNome("RH");
+        Funcionario funcionario = new Funcionario();
 
-        //Salva o novo departamento no repositório
-        session.persist(departamento);
+        departamento.setNome("Engenharia");
+        departamentoDao.save(departamento);
+        System.out.println(departamentoDao.findAll());
 
-        //Confirma a transação. Caso alguma das ações dadas após beginTransacation(), de errado, todas as outras ações feitas são canceladas.
-        session.getTransaction().commit();
-        session.close();
-        factory.close();
-
-
-
+         funcionario.setNome("Sallenkon");
+         funcionario.setDepartamento(departamento);
+        funcionarioDao.save(funcionario);
         }
     }

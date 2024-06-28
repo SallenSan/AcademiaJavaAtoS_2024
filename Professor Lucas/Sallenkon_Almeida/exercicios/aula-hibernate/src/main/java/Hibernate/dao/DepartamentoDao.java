@@ -11,7 +11,7 @@ public class DepartamentoDao {
     Departamento departamento;
 
     public void save(Departamento departamento) {
-        inSession(factory, entityManager -> {
+        HibernateConfig.inSession(factory, entityManager -> {
             entityManager.persist(departamento);
         });
     }

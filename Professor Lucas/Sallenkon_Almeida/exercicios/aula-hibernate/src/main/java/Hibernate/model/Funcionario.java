@@ -5,30 +5,32 @@ import lombok.*;
 import java.util.List;
 
 @Entity
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 @Builder
+@ToString(exclude = {"departamento", "projeto"})
 public class Funcionario {
 
     @Id
-    @Column(name = "id")
+    @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique=true, nullable=false,length=50,name="nome")
+    @Column(nullable=false, unique=true)
     private String nome;
-    @Column(name = "salario")
-    private Double salario;
-    @Column
+    @Column(nullable=false)
     private String cargo;
 
+    @JoinColumn(nullable=false)
     @ManyToOne(fetch = FetchType.EAGER)// indica que varios funcionarios podem fazer parte de um departamento
     private Departamento departamento;
 
+    @JoinColumn(nullable=false)
     @ManyToOne(fetch = FetchType.EAGER)
-    private List<Projeto> projetos;
+    private Projeto projeto;
 
+    public Funcionario(String nome) {
+        this.nome = nome;
+    }
 
 }

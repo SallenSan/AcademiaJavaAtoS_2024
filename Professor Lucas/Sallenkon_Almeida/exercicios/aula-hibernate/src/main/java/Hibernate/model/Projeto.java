@@ -3,23 +3,24 @@ package Hibernate.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
+@ToString(exclude = "funcionarios")
 @Builder
 public class Projeto {
 
     @Id
-    @Column(name = "id")
+    @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nome")
+    @Column(nullable = false, unique = true)
     private String nome;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    private Funcionario funcionario;
+    @OneToMany(mappedBy = "projeto", fetch = FetchType.EAGER)
+    private List<Funcionario> funcionarios;
 }

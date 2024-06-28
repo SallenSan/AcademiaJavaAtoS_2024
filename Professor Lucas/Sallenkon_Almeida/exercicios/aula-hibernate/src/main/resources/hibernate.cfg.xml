@@ -9,10 +9,11 @@
 
         <!-- Configurações do Hibernate -->
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.show_sql">false</property>
 
         <!-- Mapeamento de Classe -->
         <mapping class="Hibernate.model.Departamento"/>
         <mapping class="Hibernate.model.Funcionario"/>
+        <mapping class="Hibernate.model.Projeto"/>
     </session-factory>
 </hibernate-configuration>

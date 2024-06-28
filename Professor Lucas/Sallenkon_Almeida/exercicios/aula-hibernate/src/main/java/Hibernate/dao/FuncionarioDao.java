@@ -11,37 +11,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
+import static Hibernate.dao.HibernateConfig.inSession;
+
 public class FuncionarioDao {
-    Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
-    SessionFactory factory = cfg.buildSessionFactory();
-    List<Funcionario> funcionarios = new ArrayList<>();
-    Funcionario funcionario;
-
-    static void inSession(EntityManagerFactory factory, Consumer<EntityManager> work) {
-        var entityMananger = factory.createEntityManager();
-        var transaction = entityMananger.getTransaction();
-        try {
-            transaction.begin();
-            work.accept(entityMananger);
-            transaction.commit();
-        } catch (Exception e) {
-            if (transaction.isActive()) transaction.rollback();
-            throw e;
-        } finally {
-            entityMananger.close();
-
-        }
-    }
+  private SessionFactory factory = HibernateConfig.getSessionFactory();
+  private List<Funcionario> funcionarios = new ArrayList<>();
+  Funcionario funcionario;
 
     public void save(Funcionario funcionario) {
         inSession(factory, entityManager -> {
             entityManager.persist(funcionario);
-        });
-    }
-
-    public void update(Funcionario funcionario) {
-        inSession(factory, entityManager -> {
-            entityManager.merge(funcionario);
         });
     }
 
