@@ -1,19 +1,16 @@
 package Hibernate.dao;
 
+import Hibernate.interfacesDao.FuncionarioDao;
+import Hibernate.model.Departamento;
 import Hibernate.model.Funcionario;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 import static Hibernate.dao.HibernateConfig.inSession;
 
-public class FuncionarioDao {
+public class FuncionarioImpl implements FuncionarioDao {
   private SessionFactory factory = HibernateConfig.getSessionFactory();
   private List<Funcionario> funcionarios = new ArrayList<>();
   Funcionario funcionario;
@@ -21,6 +18,12 @@ public class FuncionarioDao {
     public void save(Funcionario funcionario) {
         inSession(factory, entityManager -> {
             entityManager.persist(funcionario);
+        });
+    }
+
+    public void update(Funcionario funcionario) {
+        inSession(factory, entityManager -> {
+            entityManager.merge(funcionario);
         });
     }
 

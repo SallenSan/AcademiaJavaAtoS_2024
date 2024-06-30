@@ -1,11 +1,12 @@
 package Hibernate.dao;
+import Hibernate.interfacesDao.DepartamentoDao;
 import Hibernate.model.Departamento;
 import org.hibernate.SessionFactory;
 import java.util.ArrayList;
 import java.util.List;
 import static Hibernate.dao.HibernateConfig.inSession;
 
-public class DepartamentoDao {
+public class DepartamentoImpl implements DepartamentoDao {
     private SessionFactory factory = HibernateConfig.getSessionFactory();
     private List<Departamento> departamentos = new ArrayList<>();
     Departamento departamento;

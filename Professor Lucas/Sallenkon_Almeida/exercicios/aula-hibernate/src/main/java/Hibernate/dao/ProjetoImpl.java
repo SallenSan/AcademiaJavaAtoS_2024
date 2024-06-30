@@ -1,5 +1,6 @@
 package Hibernate.dao;
 
+import Hibernate.interfacesDao.ProjetoDao;
 import Hibernate.model.Projeto;
 import org.hibernate.SessionFactory;
 
@@ -8,7 +9,7 @@ import java.util.List;
 
 import static Hibernate.dao.HibernateConfig.inSession;
 
-public class ProjetoDao {
+public class ProjetoImpl implements ProjetoDao {
     private SessionFactory factory = HibernateConfig.getSessionFactory();
     private List<Projeto> projetos = new ArrayList<Projeto>();
     Projeto projeto;
