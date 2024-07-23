@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configurações do PostgreSQL -->
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/biblioteca</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">postgres</property>
+
+        <!-- Configurações do Hibernate -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">false</property>
+
+        <!-- Mapeamento de Classe -->
+        <mapping class="jpa.model.Livro"/>
+        <mapping class="jpa.model.Autor"/>
+        <mapping class="jpa.model.Editora"/>
+        <mapping class="jpa.model.Categoria"/>
+    </session-factory>
+</hibernate-configuration>

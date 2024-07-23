@@ -14,7 +14,7 @@ public class Main {
         DepartamentoDao departamentoDao = new DepartamentoImpl();
         FuncionarioDao funcionarioDao = new FuncionarioImpl();
         ProjetoDao projetoDao = new ProjetoImpl();
-        
+
         MenuOp menu = new MenuOp(departamentoDao, funcionarioDao, projetoDao);
 
         menu.mostrarMenu();

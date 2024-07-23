@@ -97,8 +97,16 @@ public class ClienteDao {
         }
 
         return clientes;
-
     }
 
+    public int deletarCliente(int id) {
+        String query = "delete from cliente where cod_cliente = ?";
+        try (Connection connection = DbConnection.getConnection(); PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setInt(1, id);
+            return ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
 
+        }
+    }
 }

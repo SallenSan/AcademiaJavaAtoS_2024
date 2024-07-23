@@ -16,6 +16,9 @@ public class Cliente {
         this.cpf = cpf;
         this.telefone = telefone;
     }
+    public Long getId() {
+        return id;
+    }
 
     public String getNome() {
         return nome;
@@ -50,5 +53,8 @@ public class Cliente {
                 ", telefone='" + telefone + '\'' +
                 '}';
     }
+
+
+
 }
 

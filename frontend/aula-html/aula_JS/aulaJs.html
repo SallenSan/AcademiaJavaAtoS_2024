@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <script>
+       // alert("Olá mundo")
+
+       var teste = "teste";
+       teste = 1;
+       teste = "1" + 1;
+       teste = true;
+       alert(teste)
+
+       undefined;
+       null;
+
+       var n1 = 10;
+       var n2 = 10.5;
+       var n3 = 10.5e3;
+       var n4 = oxff;
+
+       var S1 = "teste de string";
+       var S2 = 'teste de string';
+
+       var b1 = true;
+       var b2 = false;
+
+       var u = undefined;
+       var n = null;
+
+       var objeto = 
+       {
+        id:5,
+        nome: "João"
+       };
+
+       var array = ["lista", "de", "array"] // um array ou vetor
+
+       // CONDICIONAIS
+
+       var numero = 5;
+
+       if(numero == 1){
+        console.log("Numero igual à 1");
+       }
+
+       if(numero == 1){
+        console.log("Numero é igual a 1(string)");
+       }
+
+       if(numero === "1"){// verifica o valor e o tipo
+        console.log("Numero é igual a 1(string)");
+       }
+
+       // operador ternario
+       var bool = (numero === "1");
+       var resultado = (numero === "1")?"iguais":"diferente";
+
+       // usando switch case
+
+       var laranjas = 6;
+       switch(laranjas){
+        case 1:
+            console.log("faça um copo de suco!");
+            break;
+        case 2:
+        console.log("faça dois copos de suco!");
+        break;   
+       }
+
+       // loop
+
+       var pessoas = ["João", "José", "Maria", "Carlos", "Joana"]
+       for(var i = 0; i < pessoas; i++){
+        console.log(pessoas[1]);
+       }
+
+       var nomes = "";
+       var pessoa = {
+        nome
+       }
+
+       //exercicio1:
+       for(var i = 1; i <= 10; i++){
+        if(i % 2 !==0){
+            console.log(i);
+        }
+       }
+
+       //exercicio2:
+       var soma = 0;
+       for(var i = 1; i<=100; i++){
+        soma += i;
+       }
+
+
+    </script>
+</head>
+<body>
+    Aula de JavaScript
+    <button onclick="alert('Olá mundo!')">Clique aqui</button>
+</body>
+</html>

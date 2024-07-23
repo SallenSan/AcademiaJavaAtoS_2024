@@ -7,7 +7,7 @@ public class Categoria {
     private String nome;
     private BigDecimal valor;
 
-    public Categoria() {
+    public Categoria(int idCategoria, String nomeCategoria) {
     }
 
     public Categoria(Long id, String nome, BigDecimal valor) {
@@ -16,7 +16,7 @@ public class Categoria {
         this.valor = valor;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 

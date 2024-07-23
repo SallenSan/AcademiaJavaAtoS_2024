@@ -84,10 +84,10 @@ public class AtorDao {
 
     public int deletarAtor(int id){
         String query = "DELETE FROM ator WHERE cod_ator = ?";
-        try(Connection connection = DbConnection.getConnection(); PreparedStatement ps = connection.prepareStatement(query)){
+        try (Connection connection = DbConnection.getConnection(); PreparedStatement ps = connection.prepareStatement(query)) {
             ps.setInt(1, id);
             return ps.executeUpdate();
-        }catch(SQLException e){
+        } catch (SQLException e) {
             throw new RuntimeException(e);
 
         }

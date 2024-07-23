@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="066b4fbb-b870-4de3-be96-43abf01de859" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../WS_aula/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WS_aula/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WS_aula/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WS_aula/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WS_aula/src/main/java/org/example/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WS_aula/src/main/java/org/example/CalculatorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aula-Junit/src/main/java/calculator/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aula-Junit/src/test/java/CalculatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/src/main/java/jpa/config/HibernateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/src/main/java/jpa/model/Autor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/src/main/java/jpa/model/Categoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/src/main/java/jpa/model/Editora.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/src/main/java/jpa/model/Livro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../biblioteca-hibernate/src/main/resources/hibernateconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/dao/DependenteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/dao/EnderecoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/dao/FilmeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/ClienteEndereco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/FilmeAtor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Genero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/LocacaoFilme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws_client_aula/src/main/java/org/example/ServerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula-hibernate/src/main/java/Hibernate/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula-hibernate/src/main/java/Hibernate/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/dao/AtorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/dao/AtorDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/dao/ClienteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/dao/ClienteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Dependente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Dependente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Filme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Locacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicio_jdbc_locadora/src/main/java/org/example/model/Locacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../frontend/aula-html/aula01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../frontend/aula-html/aula01.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2iz9eW4XrLzV8ZRqvWwdW0ABdrF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/a867759/Desktop/ACADEMIA JAVA/Academia_java_UFN_2024/Professor Lucas/Sallenkon_Almeida/exercicios/aula-servlet/src/main/java/org/example/Main.java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="066b4fbb-b870-4de3-be96-43abf01de859" name="Changes" comment="" />
+      <created>1720482636539</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720482636539</updated>
+      <workItem from="1720482639564" duration="510000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
