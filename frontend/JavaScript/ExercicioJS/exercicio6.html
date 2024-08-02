@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Altera Cor e Fundo</title>
+</head>
+<body>
+    <p id="text">Parágrafo que terá suas cores alteradas.</p>
+    <button onclick="changeFontColor('white')">Fonte Branca</button>
+    <button onclick="changeFontColor('black')">Fonte Preta</button>
+    <button onclick="changeBackgroundColor('white')">Fundo Branco</button>
+    <button onclick="changeBackgroundColor('black')">Fundo Preto</button>
+
+    <script>
+        function changeFontColor(color) {
+            document.getElementById('text').style.color = color;
+        }
+
+        function changeBackgroundColor(color) {
+            document.getElementById('text').style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

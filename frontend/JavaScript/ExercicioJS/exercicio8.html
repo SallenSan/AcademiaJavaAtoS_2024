@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maiúscula e Minúscula</title>
+</head>
+<body>
+    <p id="text">Parágrafo que terá o texto transformado.</p>
+    <button onclick="transformText('uppercase')">Maiúscula</button>
+    <button onclick="transformText('lowercase')">Minúscula</button>
+
+    <script>
+        function transformText(caseType) {
+            var text = document.getElementById('text');
+            text.style.textTransform = caseType;
+        }
+    </script>
+</body>
+</html>

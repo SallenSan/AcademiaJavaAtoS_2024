@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aumentar e Diminuir Fonte</title>
+</head>
+<body>
+    <p id="text">Parágrafo que terá o tamanho da fonte alterado.</p>
+    <button onclick="changeFontSize(1)">Aumentar Fonte</button>
+    <button onclick="changeFontSize(-1)">Diminuir Fonte</button>
+
+    <script>
+        function changeFontSize(step) {
+            var text = document.getElementById('text');
+            var style = window.getComputedStyle(text, null).getPropertyValue('font-size');
+            var currentSize = parseFloat(style);
+            text.style.fontSize = (currentSize + step) + 'px';
+        }
+    </script>
+</body>
+</html>

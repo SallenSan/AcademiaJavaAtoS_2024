@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar Cor de Fundo com Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mudar Cor de Fundo com Links</h1>
+    <a href="#" onmouseover="mudarCor('red')" onmouseout="resetarCor()">Vermelho</a>
+    <a href="#" onmouseover="mudarCor('green')" onmouseout="resetarCor()">Verde</a>
+    <a href="#" onmouseover="mudarCor('blue')" onmouseout="resetarCor()">Azul</a>
+    <a href="#" onmouseover="mudarCor('yellow')" onmouseout="resetarCor()">Amarelo</a>
+
+    <script>
+        function mudarCor(cor) {
+            document.body.style.backgroundColor = cor;
+        }
+        function resetarCor() {
+            document.body.style.backgroundColor = ''; // Reseta para a cor original
+        }
+    </script>
+</body>
+</html>

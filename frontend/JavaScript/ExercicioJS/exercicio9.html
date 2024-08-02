@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Usuário</title>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        Login: <input type="text" id="login"><br>
+        Senha: <input type="password" id="password"><br>
+        Confirmar Senha: <input type="password" id="confirmPassword"><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var login = document.getElementById('login').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (login === '' || password === '' || confirmPassword === '') {
+                alert('Todos os campos devem estar preenchidos.');
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert('As senhas não são iguais.');
+                return false;
+            }
+
+            if (password.length < 6 || password.length > 10) {
+                alert('A senha deve ter entre 6 e 10 caracteres.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

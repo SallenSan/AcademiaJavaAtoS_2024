@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ocultar e Mostrar Texto</title>
+</head>
+<body>
+    <p id="text">Parágrafo a ser oculto ou mostrado.</p>
+    <button onclick="toggleText()">Ocultar/Mostrar Texto</button>
+
+    <script>
+        function toggleText() {
+            var text = document.getElementById('text');
+            if (text.style.display === 'none') {
+                text.style.display = 'block';
+            } else {
+                text.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

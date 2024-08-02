@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seleção de Cor</title>
+</head>
+<body>
+    <h1>Escolha uma cor para o fundo da página</h1>
+    <form>
+        <input type="radio" name="color" value="red" onclick="changeColor('red')"> Vermelho<br>
+        <input type="radio" name="color" value="green" onclick="changeColor('green')"> Verde<br>
+        <input type="radio" name="color" value="blue" onclick="changeColor('blue')"> Azul<br>
+        <input type="radio" name="color" value="yellow" onclick="changeColor('yellow')"> Amarelo<br>
+    </form>
+
+    <script>
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
